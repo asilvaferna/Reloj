@@ -5,24 +5,24 @@ import java.time.LocalTime;
 
 public class Display {
 
-    private boolean functionLed;
-    private boolean alarmLed;
-    private boolean clockLed;
+    private static boolean functionLed;
+    private static boolean alarmLed;
+    private static boolean clockLed;
     
 	/**
 	 * 
 	 * @param time
 	 */
-	public void showHr(String time) {
+	public static LocalTime showHr(LocalTime time) {
 		// TODO - implement Display.showHr
-		
+		return time;
 	}
 
 	/**
 	 * 
 	 * @param time
 	 */
-	public void showAlarm(String time) {
+	public static void showAlarm(LocalTime time) {
 		// TODO - implement Display.showAlarm
 		
 	}
@@ -33,7 +33,7 @@ public class Display {
 	 * @param alarmLed
 	 * @param functionLed
 	 */
-	public void showLed(boolean showClock, boolean showAlarm, boolean showFunctionSet) {
+	public static void showLed(boolean showClock, boolean showAlarm, boolean showFunctionSet) {
 		
             clockLed = showClock;
             alarmLed = showAlarm;
