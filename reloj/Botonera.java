@@ -1,42 +1,47 @@
 package reloj;
 
+import java.time.LocalTime;
+
 public class Botonera {
 
-	private boolean alarmActive;
-	private boolean setHour;
-	private boolean setAlarm;
+	private static boolean alarmActive;
+	private static boolean setHour;
+	private static boolean setAlarm;
 
-	public void alarmOn() {
+	public static void alarmOn() {
 		// TODO - implement Botonera.alarmOn
 		
 	}
 
-	public void alarmOff() {
+	public static void alarmOff() {
 		// TODO - implement Botonera.alarmOff
 		
 	}
 
-	public void configHour() {
-		// TODO - implement Botonera.configHour
+	public static void configHour() {
+            
+            Display.showLed(true, false, true);
+            
 		
 	}
 
-	public void configAlarm() {
-		// TODO - implement Botonera.configAlarm
+	public static void configAlarm() {
+		Display.showLed(false, true, true);
 		
 	}
 
-	public void plusHr() {
-		// TODO - implement Botonera.plusHr
+	public static LocalTime plusHr(LocalTime hora) {
+           
+            return hora.plusHours(1);
+            
+	}
+
+	public static LocalTime plusMin(LocalTime hora) {
+		return hora.plusMinutes(1);
 		
 	}
 
-	public void plusMin() {
-		// TODO - implement Botonera.plusMin
-		
-	}
-
-	public void stopAlarm() {
+	public static void stopAlarm() {
 		// TODO - implement Botonera.stopAlarm
 		
 	}
