@@ -11,7 +11,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- *
+ * Main class that calls all the other classes.
  * @author Adri
  */
 public class Reloj {
@@ -20,11 +20,16 @@ public class Reloj {
     public static LocalTime horaAlarma;
     public static Timer timer;
 
+    /**
+     * Constructor by default.
+     */
+    
     public Reloj() {
 
     }
 
     /**
+     * Menu for the Alarm-Clock application.
      * @param args the command line arguments
      */
     public static void main(String[] args) {
