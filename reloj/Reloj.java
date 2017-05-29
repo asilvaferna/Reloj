@@ -54,32 +54,32 @@ public class Reloj {
                     opt1 = Integer.parseInt(JOptionPane.showInputDialog("===***CONFIGURAR HORA***===\n1. Aumentar Hora\n2. Aumentar Minutos\n3. Menú Principal" + "\n\n" + Display.showHr(horaActual)));
                     while (opt1 != 3) {
                         switch (opt1) {
-                            case 1: // aumentar hora
+                            case 1: // add hours
                                 horaActual = Botonera.plusHr(horaActual);
                                 break;
-                            case 2: //aumentar minutos
+                            case 2: // add minutes
                                 horaActual = Botonera.plusMin(horaActual);
                                 break;
                         }
                         opt1 = Integer.parseInt(JOptionPane.showInputDialog("===***CONFIGURAR HORA***===\n1. Aumentar Hora\n2. Aumentar Minutos\n3. Menú Principal" + "\n\n" + Display.showHr(horaActual)));
                     }
                     break;
-                case 2: //configurar alarma
+                case 2: // alarm configuration
 
                     Botonera.configAlarm();
                     int opt2 = 0;
                     opt2 = Integer.parseInt(JOptionPane.showInputDialog("===***CONFIGURAR ALARMA***===\n1. Aumentar Hora\n2. Aumentar Minutos\n3. Activar Alarma\n4. Menú Principal" + "\n\n" + Display.showHr(horaAlarma)));
                     while (opt2 != 4) {
                         switch (opt2) {
-                            case 1: // aumentar hora
+                            case 1: // add hours
                                 horaAlarma = Botonera.plusHr(horaAlarma);
                                 Botonera.alarmOn();
                                 break;
-                            case 2: //aumentar minutos
+                            case 2: // add minutes
                                 horaAlarma = Botonera.plusMin(horaAlarma);
                                 Botonera.alarmOn();
                                 break;
-                            case 3: // activar alarma
+                            case 3: // turn on alarm
                                 timer.schedule(task, 10, 10000);
                                 Botonera.alarmOn();
 
@@ -88,8 +88,8 @@ public class Reloj {
                         opt2 = Integer.parseInt(JOptionPane.showInputDialog("===***CONFIGURAR ALARMA***===\n1. Aumentar Hora\n2. Aumentar Minutos\n3. Activar Alarma\n4. Menú Principal" + "\n\n" + Display.showHr(horaAlarma)));
                     }
                     break;
-                case 3: // parar alarma
-                    Botonera.stopAlarm();
+                case 3: // stop alarm
+                    Botonera.stopAlarm(); // 
                     timer.cancel();
                     break;
             }
