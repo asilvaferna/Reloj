@@ -1,6 +1,8 @@
 package reloj;
 
-
+/**
+ * This class is related to all the visual operations of the app.
+ */
 import java.time.LocalTime;
 
 public class Display {
@@ -10,7 +12,7 @@ public class Display {
     private static boolean clockLed;
     
 	/**
-	 * 
+	 * Displays the current hour.
 	 * @param time
 	 */
 	public static LocalTime showHr(LocalTime time) {
@@ -19,7 +21,7 @@ public class Display {
 	}
 
 	/**
-	 * 
+	 * Displays the alarm hour.
 	 * @param time
 	 */
 	public static void showAlarm(LocalTime time) {
@@ -28,7 +30,7 @@ public class Display {
 	}
 
 	/**
-	 * 
+	 * Displays the leds depending on the current mode.
 	 * @param clockLed
 	 * @param alarmLed
 	 * @param functionLed
